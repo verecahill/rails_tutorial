@@ -1,11 +1,15 @@
 HerokuTest::Application.routes.draw do
+  get "static_pages/home"
+
+  get "static_pages/help"
+
   get "home/index"
 
   resources :microposts
 
   resources :users
 
-  root :to => 'home#index'
+  root :to => 'static_pages#home'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
